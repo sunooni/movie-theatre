@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.navList {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding-top: 25px;
+  color: #ffffff;
+  opacity: 50%;
+}
+
+.userNav {
+  display: flex;
+  gap: 30px;
+  margin-left: auto;
+  padding-top: 30px;
+  padding-right: 99px;
+}
+
+.iconButton {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: #9ca3af;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.iconButton:hover {
+  background-color: #1f2937;
+  color: #ffffff;
+}
+
+.logoText {
+  text-transform: uppercase;
+  color: #ed0a32;
+  font-weight: 700;
+  font-size: 200%;
+  padding: 30px 90px;
+}
+
+.mainHeader::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: #9ca3af;
+  opacity: 20%;
+  width: 1500px;
+  margin-top: 10px;
+  margin-left: 90px; 
+}

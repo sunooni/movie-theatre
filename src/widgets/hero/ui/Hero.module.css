@@ -1,0 +1,20 @@
+.heroHeader, .heroParagraph {
+    color: #ffffff;
+    
+}
+
+.heroParagraph {
+    opacity: 30%;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    width: 425px;
+    padding-left: 90px;
+    padding-top: 167px;
+}
+
+.heroParagraph {
+    margin-bottom: 40px;
+}
