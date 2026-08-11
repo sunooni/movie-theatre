@@ -1,0 +1,26 @@
+.mainFooter {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  margin-top: 70px;
+}
+
+.footerList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0.3;
+}
+
+.mainFooter ul {
+  padding: 0;
+  margin: 0;
+}
+
+.footerListSocials {
+  display: flex;
+  gap: 10px;
+}
