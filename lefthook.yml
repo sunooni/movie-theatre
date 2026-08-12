@@ -1,0 +1,18 @@
+#  Refer for explanation to following link:
+#  https://lefthook.dev/configuration/
+
+pre-push:
+  jobs:
+    - name: build
+      run: npm run build
+
+pre-commit:
+  parallel: true
+  jobs:
+    - name: lint
+      run: npx oxlint --fix "{staged_files}"
+      glob: '*.{js,ts,jsx,tsx}'
+      stage_fixed: true
+    - name: format
+      run: npx oxfmt --write "{staged_files}"
+      glob: '*.{js,ts,jsx,tsx}'

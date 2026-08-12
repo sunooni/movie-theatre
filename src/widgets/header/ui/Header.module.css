@@ -3,7 +3,6 @@
   flex-direction: row;
 }
 
-
 .navList {
   display: flex;
   flex-direction: row;
@@ -58,5 +57,5 @@
   opacity: 20%;
   width: 1500px;
   margin-top: 10px;
-  margin-left: 90px; 
+  margin-left: 90px;
 }

@@ -11,7 +11,7 @@ const cooperationLinks = [
 export const FooterCooperation = () => {
   return (
     <nav className={styles.footerCooperation}>
-        <h3 className={styles.footerHeader}>Сотрудничество</h3>
+      <h3 className={styles.footerHeader}>Сотрудничество</h3>
       <ul className={styles.footerList}>
         {cooperationLinks.map((link) => (
           <li key={link.href}>

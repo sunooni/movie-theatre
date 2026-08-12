@@ -9,7 +9,7 @@ const menuLinks = [
 export const FooterMenu = () => {
   return (
     <nav className={styles.footerMenu}>
-        <h3 className={styles.footerHeader}>Меню</h3>
+      <h3 className={styles.footerHeader}>Меню</h3>
       <ul className={styles.footerList}>
         {menuLinks.map((link) => (
           <li key={link.href}>

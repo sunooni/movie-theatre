@@ -1,6 +1,6 @@
-import { HeaderLogo } from "./Header-logo";
-import { HeaderNav } from "./Header-nav";
-import { HeaderUserNav } from "./Header-user-nav";
+import { HeaderLogo } from "./HeaderLogo";
+import { HeaderNav } from "./HeaderNav";
+import { HeaderUserNav } from "./HeaderUserNav";
 import styles from "./Header.module.css";
 
 export const Header = () => {

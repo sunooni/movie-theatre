@@ -1,1 +1,1 @@
-export { HeroText } from "./ui/Hero-text";
+export { HeroText } from "./ui/HeroText";

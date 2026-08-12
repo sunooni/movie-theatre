@@ -1,18 +1,18 @@
-import { HeaderLogo } from "@/widgets/header/ui/Header-logo"
-import { FooterMenu } from "./Footer-menu"
-import { FooterCatalog } from "./Footer-catalog"
-import { FooterCooperation } from "./Footer-cooperation"
-import { FooterSocials } from "./Footer-socials"
+import { HeaderLogo } from "@/widgets/header/ui/HeaderLogo";
+import { FooterMenu } from "./FooterMenu";
+import { FooterCatalog } from "./FooterCatalog";
+import { FooterCooperation } from "./FooterCooperation";
+import { FooterSocials } from "./FooterSocials";
 import styles from "./Footer.module.css";
 
 export const Footer = () => {
-    return (
-        <footer className={styles.mainFooter}>
-        <HeaderLogo/>
-        <FooterMenu />
-        <FooterCatalog />
-        <FooterCooperation />
-        <FooterSocials />
-        </footer>
-    )
-}
+  return (
+    <footer className={styles.mainFooter}>
+      <HeaderLogo />
+      <FooterMenu />
+      <FooterCatalog />
+      <FooterCooperation />
+      <FooterSocials />
+    </footer>
+  );
+};

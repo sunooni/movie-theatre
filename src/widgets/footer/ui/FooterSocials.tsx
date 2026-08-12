@@ -1,8 +1,4 @@
-import {
-  FacebookFilled,
-  InstagramFilled,
-  TelegramFilled,
-} from "@ant-design/icons";
+import { FacebookFilled, InstagramFilled, TelegramFilled } from "@ant-design/icons";
 import styles from "./Footer.module.css";
 
 export const FooterSocials = () => {
@@ -10,9 +6,9 @@ export const FooterSocials = () => {
     <div className={styles.footerSocialsBlock}>
       <h3 className={styles.footerSocials}>Подписывайтесь на нас</h3>
       <div className={styles.footerListSocials}>
-        <FacebookFilled style={{ fontSize: '32px' }}/>
-        <InstagramFilled style={{ fontSize: '32px' }}/>
-        <TelegramFilled style={{ fontSize: '32px' }}/>
+        <FacebookFilled style={{ fontSize: "32px" }} />
+        <InstagramFilled style={{ fontSize: "32px" }} />
+        <TelegramFilled style={{ fontSize: "32px" }} />
       </div>
     </div>
   );

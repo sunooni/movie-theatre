@@ -17,12 +17,9 @@ export const Button = ({
   className,
   ...props
 }: ButtonProps) => {
-  const buttonClasses = [
-    styles.button,
-    styles[variant],
-    styles[size],
-    className,
-  ].filter(Boolean).join(" ");
+  const buttonClasses = [styles.button, styles[variant], styles[size], className]
+    .filter(Boolean)
+    .join(" ");
 
   return (
     <button className={buttonClasses} {...props}>
