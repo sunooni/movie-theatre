@@ -10,10 +10,12 @@
     "lint:fix": "oxlint --fix",
     "preview": "vite preview",
     "format": "oxfmt",
-    "format:check": "oxfmt --check"
+    "format:check": "oxfmt --check",
+    "gen:api": "orval --config orval.config.ts"
   },
   "dependencies": {
     "@ant-design/icons": "^6.3.2",
+    "clsx": "^2.1.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
   },
@@ -23,10 +25,12 @@
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.4",
+    "axios": "^1.19.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.3",
     "globals": "^17.7.0",
     "lefthook": "^2.1.10",
+    "orval": "^7.13.2",
     "oxfmt": "^0.63.0",
     "oxlint": "^1.78.0",
     "typescript": "~6.0.2",

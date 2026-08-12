@@ -1,5 +1,6 @@
 import type { ComponentPropsWithoutRef } from "react";
 import styles from "./button.module.css";
+import clsx from "clsx";
 
 type ButtonVariant = "primary" | "secondary" | "tertiary";
 type ButtonSize = "small" | "medium" | "large";
@@ -17,9 +18,7 @@ export const Button = ({
   className,
   ...props
 }: ButtonProps) => {
-  const buttonClasses = [styles.button, styles[variant], styles[size], className]
-    .filter(Boolean)
-    .join(" ");
+  const buttonClasses = clsx(styles.button, styles[variant], styles[size], className);
 
   return (
     <button className={buttonClasses} {...props}>
