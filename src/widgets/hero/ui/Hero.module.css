@@ -11,10 +11,60 @@
   display: flex;
   flex-direction: column;
   width: 425px;
-  padding-left: 90px;
-  padding-top: 167px;
 }
 
 .heroParagraph {
   margin-bottom: 40px;
+}
+
+.heroSection {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.slider {
+  position: relative;
+  width: 700px;
+  padding: 10px 0;
+}
+
+.slide {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.loading {
+  text-align: center;
+  padding: 60px;
+  color: #888;
+}
+
+.slider :global(.swiper-button-prev),
+.slider :global(.swiper-button-next) {
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.slider :global(.swiper-button-prev):hover,
+.slider :global(.swiper-button-next):hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slider :global(.swiper-button-prev):after,
+.slider :global(.swiper-button-next):after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.heroSection {
+  display: flex;
+  gap: 100px;
+    padding-top: 100px;
+
 }

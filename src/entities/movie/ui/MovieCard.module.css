@@ -1,0 +1,26 @@
+.card {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.poster {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3; 
+  object-fit: cover;
+  display: block;
+}
+
+.wide {
+  width: 350px;
+  height: 200px;
+}
