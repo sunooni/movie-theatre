@@ -1,5 +1,5 @@
 import type { ComponentPropsWithoutRef } from "react";
-import styles from "./button.module.css";
+import styles from "./Button.module.css";
 import clsx from "clsx";
 
 type ButtonVariant = "primary" | "secondary" | "tertiary";

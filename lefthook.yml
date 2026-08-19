@@ -10,9 +10,9 @@ pre-commit:
   parallel: true
   jobs:
     - name: lint
-      run: oxlint --fix "{staged_files}"
+      run: npx oxlint --fix "{staged_files}"
       glob: '*.{js,ts,jsx,tsx}'
       stage_fixed: true
     - name: format
-      run: oxfmt --write "{staged_files}"
+      run: npx oxfmt --write "{staged_files}"
       glob: '*.{js,ts,jsx,tsx}'
