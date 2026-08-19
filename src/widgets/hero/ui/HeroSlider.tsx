@@ -12,7 +12,6 @@ interface HeroSliderProps {
 }
 
 export const HeroSlider = ({ movies }: HeroSliderProps) => {
-  console.log("Movies in HeroSlider:", movies);
   return (
     <div className={styles.slider}>
       <Swiper modules={[Navigation]} spaceBetween={20} slidesPerView={3} navigation>

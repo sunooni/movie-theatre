@@ -1,6 +1,7 @@
 import type { ComponentPropsWithoutRef } from "react";
 import clsx from "clsx";
 import styles from "./MovieCard.module.css";
+import { getMoviePosterUrl } from "@/shared/utils/imageUrl";
 
 type MovieCardVariant = "long" | "wide";
 
@@ -17,9 +18,7 @@ export const MovieCard = ({
   className,
   ...props
 }: MovieCardProps) => {
-  const imageUrl = posterPath
-    ? `https://image.tmdb.org/t/p/w500${posterPath}`
-    : "https://via.placeholder.com/300x450?text=No+Image";
+  const imageUrl = getMoviePosterUrl(posterPath);
 
   const cardClasses = clsx(styles.card, styles[variant], className);
 

@@ -1,4 +1,4 @@
-import { MovieGenreSection } from "./GetMovieGenre";
+import { MovieGenreSection } from "./MovieGenreSection";
 import styles from "./catalog.module.css";
 
 export const Catalog = () => {

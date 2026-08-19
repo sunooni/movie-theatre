@@ -1,48 +1,17 @@
-import { useEffect, useState } from "react";
-import { getTmdbApi } from "@/shared/api/generated/endpoints";
-import type { MoviePopularList200ResultsItem } from "@/shared/api/generated/model/moviePopularList200ResultsItem";
-
-import { HeroSlider } from "./HeroSlider";
-import { HeroText } from "./HeroText";
+import { usePopularMovies } from "../model/usePopularMovies";
 import styles from "./Hero.module.css";
-
-const api = getTmdbApi();
+import { HeroText } from "./HeroText";
+import { HeroSlider } from "./HeroSlider";
+import { HeroSliderSkeleton } from "./HeroSliderSkeleton";
 
 export const Hero = () => {
-  const [movies, setMovies] = useState<MoviePopularList200ResultsItem[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchPopularMovies = async () => {
-      try {
-        const response = await api.moviePopularList(
-          {},
-          {
-            params: {
-              api_key: import.meta.env.VITE_TMDB_API_KEY,
-            },
-          },
-        );
-
-        setMovies(response.results || []);
-      } catch (error) {
-        console.error("Ошибка:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchPopularMovies();
-  }, []);
-
-  if (loading) {
-    return <div className={styles.loading}>Загрузка слайдера</div>;
-  }
+  const { movies, loading } = usePopularMovies();
 
   return (
     <section className={styles.heroSection}>
       <HeroText />
-      <HeroSlider movies={movies} />
+
+      {loading ? <HeroSliderSkeleton /> : <HeroSlider movies={movies} />}
     </section>
   );
 };

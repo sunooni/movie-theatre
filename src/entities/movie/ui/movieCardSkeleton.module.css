@@ -1,0 +1,30 @@
+.skeleton {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #2a2a2a;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.long {
+  aspect-ratio: 2 / 3;
+}
+
+.wide {
+  width: 350px;
+  height: 200px;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

@@ -20,3 +20,9 @@
     font-weight: bold;
     padding-top: 70px;
 }
+
+.slide {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
