@@ -1,6 +1,6 @@
 import type { ComponentPropsWithoutRef } from "react";
 import clsx from "clsx";
-import styles from "./MovieCard.module.css";
+import styles from "./MovieCardSkeleton.module.css";
 import { getMoviePosterUrl } from "@/shared/utils/imageUrl";
 
 type MovieCardVariant = "long" | "wide";
