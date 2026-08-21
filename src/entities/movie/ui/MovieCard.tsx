@@ -9,13 +9,21 @@ type MovieCardProps = ComponentPropsWithoutRef<"div"> & {
   title?: string;
   posterPath?: string | null;
   variant?: MovieCardVariant;
+  rating?: number;
+  type?: "Фильм" | "Сериал";
+  genres?: string[];
+  showInfo?: boolean;
 };
 
 export const MovieCard = ({
   title,
   posterPath,
   variant = "long",
+  rating,
+  type,
+  genres,
   className,
+  showInfo = false,
   ...props
 }: MovieCardProps) => {
   const imageUrl = getMoviePosterUrl(posterPath);
@@ -25,6 +33,18 @@ export const MovieCard = ({
   return (
     <div className={cardClasses} {...props}>
       <img src={imageUrl} alt={title || "Movie poster"} className={styles.poster} />
+
+      {showInfo && (
+        <div className={styles.info}>
+          <div className={styles.rating}>★ {rating?.toFixed(1)}</div>
+
+          <div className={styles.type}>{type}</div>
+
+          <div className={styles.genres}>{genres?.join(", ")}</div>
+
+          <div className={styles.title}>{title}</div>
+        </div>
+      )}
     </div>
   );
 };
