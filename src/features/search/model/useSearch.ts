@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect, useMemo } from "react";
+import debounce from "lodash.debounce";
 import type { SearchMulti200ResultsItem } from "@/shared/api/generated/model/searchMulti200ResultsItem";
 import { searchMovies } from "../api/search";
 
@@ -7,35 +8,36 @@ export const useSearch = () => {
   const [movies, setMovies] = useState<SearchMulti200ResultsItem[]>([]);
   const [loading, setLoading] = useState(false);
 
+  const debouncedSearch = useMemo(
+    () =>
+      debounce(async (searchQuery: string) => {
+        if (searchQuery.trim().length < 3) {
+          setMovies([]);
+          setLoading(false);
+          return;
+        }
+
+        try {
+          setLoading(true);
+          const results = await searchMovies(searchQuery);
+          setMovies(results);
+        } catch (error) {
+          console.error("Ошибка поиска:", error);
+          setMovies([]);
+        } finally {
+          setLoading(false);
+        }
+      }, 300),
+    []
+  );
+
   useEffect(() => {
-    const trimmedQuery = query.trim();
-
-    if (trimmedQuery.length < 3) {
-      setMovies([]);
-      setLoading(false);
-
-      return;
-    }
-
-    const timeoutId = setTimeout(async () => {
-      try {
-        setLoading(true);
-
-        const results = await searchMovies(trimmedQuery);
-
-        setMovies(results);
-      } catch (error) {
-        console.error("Ошибка поиска:", error);
-        setMovies([]);
-      } finally {
-        setLoading(false);
-      }
-    }, 300);
+    debouncedSearch(query);
 
     return () => {
-      clearTimeout(timeoutId);
+      debouncedSearch.cancel();
     };
-  }, [query]);
+  }, [query, debouncedSearch]);
 
   return {
     query,

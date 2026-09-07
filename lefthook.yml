@@ -14,5 +14,5 @@ pre-commit:
       glob: "*.{js,ts,jsx,tsx}"
       stage_fixed: true
     - name: format
-      run: npx oxfmt --write "{staged_files}"
+      run: npx oxlint --fix "{staged_files}"
       glob: "*.{js,ts,jsx,tsx}"

@@ -1,9 +1,9 @@
-import { HomePage } from "../pages/home";
+import { AppRoutes } from "@/app/providers/router/AppRoutes";
 
 export const App = () => {
   return (
     <div className="app">
-      <HomePage />
+      <AppRoutes />
     </div>
   );
 };
