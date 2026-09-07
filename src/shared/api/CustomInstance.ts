@@ -17,6 +17,7 @@ export const customInstance = <T>(
 
     params: {
       api_key: import.meta.env.VITE_TMDB_API_KEY,
+      language: "ru-RU",
       ...config.params,
       ...options?.params,
     },

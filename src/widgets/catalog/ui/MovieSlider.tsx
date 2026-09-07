@@ -22,21 +22,34 @@ interface SliderProps {
 export const MovieSlider = ({ movies }: SliderProps) => {
   return (
     <div className={styles.slider}>
-      <Swiper modules={[Navigation]} spaceBetween={10} slidesPerView={4} navigation>
-        {movies.map((movie) => (
-          <SwiperSlide key={movie.id}>
-            <div className={styles.slide}>
-              <MovieCard
-                title={movie.title}
-                posterPath={movie.poster_path}
-                rating={movie.vote_average}
-                genres={getMovieGenres(movie.genre_ids)}
-                variant="wide"
-                showInfo
-              />
-            </div>
-          </SwiperSlide>
-        ))}
+      <Swiper
+        modules={[Navigation]}
+        spaceBetween={10}
+        slidesPerView={4}
+        navigation
+      >
+        {movies.map((movie) => {
+          if (movie.id === undefined) {
+            return null;
+          }
+
+          return (
+            <SwiperSlide key={movie.id}>
+              <div className={styles.slide}>
+                <MovieCard
+                  id={movie.id}
+                  title={movie.title}
+                  posterPath={movie.poster_path}
+                  rating={movie.vote_average}
+                  type="movie"
+                  genres={getMovieGenres(movie.genre_ids)}
+                  variant="wide"
+                  showInfo
+                />
+              </div>
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </div>
   );

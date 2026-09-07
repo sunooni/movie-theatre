@@ -14,11 +14,20 @@ interface HeroSliderProps {
 export const HeroSlider = ({ movies }: HeroSliderProps) => {
   return (
     <div className={styles.slider}>
-      <Swiper modules={[Navigation]} spaceBetween={20} slidesPerView={3} navigation>
+      <Swiper
+        modules={[Navigation]}
+        spaceBetween={20}
+        slidesPerView={3}
+        navigation
+      >
         {movies.map((movie) => (
           <SwiperSlide key={movie.id}>
             <div className={styles.slide}>
-              <MovieCard title={movie.title} posterPath={movie.poster_path} />
+              <MovieCard
+                id={movie.id!}
+                title={movie.title}
+                posterPath={movie.poster_path}
+              />
             </div>
           </SwiperSlide>
         ))}
