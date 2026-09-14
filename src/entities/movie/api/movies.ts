@@ -4,7 +4,6 @@ const api = getTmdbApi();
 
 export const getPopularMovies = async () => {
   const response = await api.moviePopularList({
-    language: "ru-RU",
   });
 
   return response.results ?? [];
@@ -13,7 +12,6 @@ export const getPopularMovies = async () => {
 export const getMoviesByGenre = async (genreId: string) => {
   const response = await api.discoverMovie({
     with_genres: genreId,
-    language: "ru-RU",
     sort_by: "popularity.desc",
   });
 

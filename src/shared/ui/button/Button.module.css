@@ -18,12 +18,12 @@
 }
 
 .secondary {
-  background-color: none;
+  background-color: #141025;
   border: 1px solid #ffffff;
 }
 
 .tertiary {
-  background-color: none;
+  background-color: #141025;
   border: 1px solid #ffffff;
 }
 
@@ -36,7 +36,7 @@
 .medium {
   padding: 10px 18px;
   font-size: 14px;
-  width: 167px;
+  width: 107px;
   height: 55px;
 }
 .large {

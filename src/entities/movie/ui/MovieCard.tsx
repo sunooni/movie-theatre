@@ -1,21 +1,24 @@
-import type { ComponentPropsWithoutRef } from "react";
 import clsx from "clsx";
 import styles from "./MovieCard.module.css";
 import { getMoviePosterUrl } from "@/shared/utils/imageUrl";
+import { Link } from "react-router-dom";
 
 type MovieCardVariant = "long" | "wide";
 
-type MovieCardProps = ComponentPropsWithoutRef<"div"> & {
+type MovieCardProps = {
+  id: number | string;
   title?: string;
   posterPath?: string | null;
   variant?: MovieCardVariant;
   rating?: number;
-  type?: "Фильм" | "Сериал";
+  type?: "movie" | "series";
   genres?: string[];
   showInfo?: boolean;
+  className?: string; 
 };
 
 export const MovieCard = ({
+  id,
   title,
   posterPath,
   variant = "long",
@@ -24,14 +27,13 @@ export const MovieCard = ({
   genres,
   className,
   showInfo = false,
-  ...props
 }: MovieCardProps) => {
   const imageUrl = getMoviePosterUrl(posterPath);
 
   const cardClasses = clsx(styles.card, styles[variant], className);
 
   return (
-    <div className={cardClasses} {...props}>
+    <Link to={`/movie/${id}`} className={cardClasses}>
       <img src={imageUrl} alt={title || "Movie poster"} className={styles.poster} />
 
       {showInfo && (
@@ -45,6 +47,6 @@ export const MovieCard = ({
           <div className={styles.title}>{title}</div>
         </div>
       )}
-    </div>
+    </Link>
   );
 };
