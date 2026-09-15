@@ -1,7 +1,7 @@
-const FAVORITES_KEY = "favoriteMovies";
+import { STORAGE_KEYS } from "@/shared/keys/keys";
 
 export const getFavorites = () => {
-  return JSON.parse(localStorage.getItem(FAVORITES_KEY) || "[]");
+  return JSON.parse(localStorage.getItem(STORAGE_KEYS.FAVORITES) || "[]");
 };
 
 export const isFavorite = (id: number) => {
@@ -15,7 +15,7 @@ export const toggleFavorite = (id: number) => {
     ? favorites.filter((movieId: number) => movieId !== id)
     : [...favorites, id];
 
-  localStorage.setItem(FAVORITES_KEY, JSON.stringify(updated));
+  localStorage.setItem(STORAGE_KEYS.FAVORITES, JSON.stringify(updated));
 
   return updated.includes(id);
 };
