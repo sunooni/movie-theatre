@@ -1,13 +1,9 @@
 .posterWithDetails {
   display: flex;
   gap: 50px;
-
   width: 100%;
-
   padding: 70px 90px;
-
   box-sizing: border-box;
-
   color: #ffffff;
 }
 
@@ -156,7 +152,6 @@
   font-size: 13px;
   line-height: 1.4;
 }
-
 
 .titleSimilarMovies {
   margin: 0;
@@ -327,12 +322,7 @@
   width: 260px;
   height: 390px;
   border-radius: 12px;
-  background: linear-gradient(
-    90deg,
-    #1a1a1a 25%,
-    #2a2a2a 50%,
-    #1a1a1a 75%
-  );
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
   background-size: 200% 100%;
   animation: skeleton 1.5s infinite;
 }
@@ -342,12 +332,7 @@
   height: 42px;
   margin-bottom: 25px;
   border-radius: 8px;
-  background: linear-gradient(
-    90deg,
-    #1a1a1a 25%,
-    #2a2a2a 50%,
-    #1a1a1a 75%
-  );
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
   background-size: 200% 100%;
   animation: skeleton 1.5s infinite;
 }
@@ -372,12 +357,7 @@
 
 .buttonSkeleton,
 .buttonSmallSkeleton {
-  background: linear-gradient(
-    90deg,
-    #1a1a1a 25%,
-    #2a2a2a 50%,
-    #1a1a1a 75%
-  );
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
   background-size: 200% 100%;
   animation: skeleton 1.5s infinite;
 }
@@ -392,12 +372,7 @@
   height: 16px;
   margin-bottom: 10px;
   border-radius: 5px;
-  background: linear-gradient(
-    90deg,
-    #1a1a1a 25%,
-    #2a2a2a 50%,
-    #1a1a1a 75%
-  );
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
   background-size: 200% 100%;
   animation: skeleton 1.5s infinite;
 }
@@ -415,12 +390,7 @@
   height: 16px;
   margin-bottom: 12px;
   border-radius: 5px;
-  background: linear-gradient(
-    90deg,
-    #1a1a1a 25%,
-    #2a2a2a 50%,
-    #1a1a1a 75%
-  );
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
   background-size: 200% 100%;
   animation: skeleton 1.5s infinite;
 }
@@ -440,12 +410,7 @@
   height: 31px;
   margin-bottom: 25px;
   border-radius: 8px;
-  background: linear-gradient(
-    90deg,
-    #1a1a1a 25%,
-    #2a2a2a 50%,
-    #1a1a1a 75%
-  );
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
   background-size: 200% 100%;
   animation: skeleton 1.5s infinite;
 }
@@ -453,12 +418,7 @@
 .photoSkeleton {
   width: 150px;
   height: 210px;
-  background: linear-gradient(
-    90deg,
-    #1a1a1a 25%,
-    #2a2a2a 50%,
-    #1a1a1a 75%
-  );
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
   background-size: 200% 100%;
   animation: skeleton 1.5s infinite;
 }
@@ -468,12 +428,7 @@
   height: 18px;
   margin: 12px;
   border-radius: 5px;
-  background: linear-gradient(
-    90deg,
-    #1a1a1a 25%,
-    #2a2a2a 50%,
-    #1a1a1a 75%
-  );
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
   background-size: 200% 100%;
   animation: skeleton 1.5s infinite;
 }
@@ -483,12 +438,7 @@
   height: 14px;
   margin: 0 12px 14px;
   border-radius: 5px;
-  background: linear-gradient(
-    90deg,
-    #1a1a1a 25%,
-    #2a2a2a 50%,
-    #1a1a1a 75%
-  );
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
   background-size: 200% 100%;
   animation: skeleton 1.5s infinite;
 }
@@ -515,12 +465,7 @@
   margin-bottom: 25px;
   border-radius: 8px;
 
-  background: linear-gradient(
-    90deg,
-    #1a1a1a 25%,
-    #2a2a2a 50%,
-    #1a1a1a 75%
-  );
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
 
   background-size: 200% 100%;
   animation: skeleton 1.5s infinite;
@@ -543,12 +488,7 @@
   height: 260px;
   border-radius: 12px;
 
-  background: linear-gradient(
-    90deg,
-    #1a1a1a 25%,
-    #2a2a2a 50%,
-    #1a1a1a 75%
-  );
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
 
   background-size: 200% 100%;
   animation: skeleton 1.5s infinite;
@@ -563,12 +503,7 @@
   margin-bottom: 8px;
   border-radius: 5px;
 
-  background: linear-gradient(
-    90deg,
-    #1a1a1a 25%,
-    #2a2a2a 50%,
-    #1a1a1a 75%
-  );
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
 
   background-size: 200% 100%;
   animation: skeleton 1.5s infinite;
@@ -602,12 +537,7 @@
   margin-bottom: 30px;
   border-radius: 8px;
 
-  background: linear-gradient(
-    90deg,
-    #1a1a1a 25%,
-    #2a2a2a 50%,
-    #1a1a1a 75%
-  );
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
 
   background-size: 200% 100%;
   animation: skeleton 1.5s infinite;
@@ -618,12 +548,7 @@
   height: 40px;
   border-radius: 8px;
 
-  background: linear-gradient(
-    90deg,
-    #1a1a1a 25%,
-    #2a2a2a 50%,
-    #1a1a1a 75%
-  );
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
 
   background-size: 200% 100%;
   animation: skeleton 1.5s infinite;
