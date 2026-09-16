@@ -23,7 +23,17 @@ export const getMovieVideos = async (movieId: number) => {
 };
 
 export const getMovieReviews = async (movieId: number) => {
-  const response = await api.movieReviews(movieId);
+  const russianResponse = await api.movieReviews(movieId, {
+    language: "ru-RU",
+  });
 
-  return response.results ?? [];
+  if (russianResponse.results?.length) {
+    return russianResponse.results;
+  }
+
+  const englishResponse = await api.movieReviews(movieId, {
+    language: "en-US",
+  });
+
+  return englishResponse.results ?? [];
 };

@@ -1,12 +1,12 @@
 import { useMovieDetails } from "@/widgets/movie-info/model/useMovieDetails";
-
+import { MovieCastSkeleton } from "./MovieCastSkeleton";
 import styles from "./movieinfo.module.css";
 
 export const MovieCast = () => {
   const { credits, loading } = useMovieDetails();
 
   if (loading) {
-    return <div>Загрузка актёров...</div>;
+    return <MovieCastSkeleton />;
   }
 
   return (

@@ -1,6 +1,6 @@
 import { getMoviePosterUrl } from "@/shared/utils/imageUrl";
 import { useMovieDetails } from "@/widgets/movie-info/model/useMovieDetails";
-
+import { MovieInfoSkeleton } from "./MovieInfoSkeleton";
 import styles from "./movieInfo.module.css";
 import { Button } from "@/shared/ui/button/Button";
 import { FavoriteButton } from "@/features/favorite/ui/favoriteButton";
@@ -9,16 +9,14 @@ export const MovieInfo = () => {
   const { movie, credits, loading } = useMovieDetails();
 
   if (loading) {
-    return <div>Загрузка...</div>;
+    return <MovieInfoSkeleton />;
   }
 
   if (!movie) {
     return <div>Фильм не найден</div>;
   }
 
-  const director = credits?.crew?.find(
-    (person: any) => person.job === "Director",
-  );
+  const director = credits?.crew?.find((person: any) => person.job === "Director");
 
   return (
     <div className={styles.posterWithDetails}>
@@ -42,33 +40,21 @@ export const MovieInfo = () => {
         <div className={styles.other}>
           <p className={styles.overview}>{movie.overview}</p>
 
-          <p className={styles.rate}>
-            Рейтинг: {movie.vote_average?.toFixed(1)}
-          </p>
+          <p className={styles.rate}>Рейтинг: {movie.vote_average?.toFixed(1)}</p>
 
-          <p className={styles.releaseDate}>
-            Дата выхода: {movie.release_date}
-          </p>
+          <p className={styles.releaseDate}>Дата выхода: {movie.release_date}</p>
 
           <p className={styles.genres}>
             Жанры: {movie.genres?.map((genre: any) => genre.name).join(", ")}
           </p>
 
           <p>
-            Страна:{" "}
-            {movie.production_countries
-              ?.map((country: any) => country.name)
-              .join(", ")}
+            Страна: {movie.production_countries?.map((country: any) => country.name).join(", ")}
           </p>
 
           <p>Режиссёр: {director?.name}</p>
 
-          <p>
-            Языки:{" "}
-            {movie.spoken_languages
-              ?.map((language: any) => language.name)
-              .join(", ")}
-          </p>
+          <p>Языки: {movie.spoken_languages?.map((language: any) => language.name).join(", ")}</p>
 
           <p>Время: {movie.runtime} мин</p>
         </div>
