@@ -10,12 +10,7 @@ export const useFavorites = () => {
     const favoriteIds = getFavorites();
 
     const fetchMovies = async () => {
-      const moviesData = [];
-
-      for (const id of favoriteIds) {
-        const movie = await getMovieDetails(id);
-        moviesData.push(movie);
-      }
+      const moviesData = await Promise.all(favoriteIds.map((id: number) => getMovieDetails(id)));
 
       setMovies(moviesData);
     };

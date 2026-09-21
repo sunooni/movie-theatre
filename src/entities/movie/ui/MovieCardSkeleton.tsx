@@ -1,19 +1,14 @@
-import type { ComponentPropsWithoutRef } from "react";
-import clsx from "clsx";
+import { Skeleton } from "@/shared/ui/skeleton/Skeleton";
+
 import styles from "./MovieCardSkeleton.module.css";
 
 type MovieCardSkeletonVariant = "long" | "wide";
 
-type MovieCardSkeletonProps = ComponentPropsWithoutRef<"div"> & {
+type MovieCardSkeletonProps = {
   variant?: MovieCardSkeletonVariant;
+  className?: string;
 };
 
-export const MovieCardSkeleton = ({
-  variant = "long",
-  className,
-  ...props
-}: MovieCardSkeletonProps) => {
-  const skeletonClasses = clsx(styles.skeleton, styles[variant], className);
-
-  return <div className={skeletonClasses} {...props} />;
+export const MovieCardSkeleton = ({ variant = "long", className }: MovieCardSkeletonProps) => {
+  return <Skeleton className={`${styles[variant]} ${className || ""}`} />;
 };

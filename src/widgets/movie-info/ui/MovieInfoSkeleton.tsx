@@ -1,32 +1,34 @@
+import { Skeleton } from "@/shared/ui/skeleton/Skeleton";
+
 import styles from "./movieInfo.module.css";
 
 export const MovieInfoSkeleton = () => {
   return (
     <div className={styles.posterWithDetails}>
-      <div className={styles.posterSkeleton} />
+      <Skeleton className={styles.posterSkeleton} />
 
       <div className={styles.description}>
-        <div className={styles.titleSkeleton} />
+        <Skeleton className={styles.titleSkeleton} />
 
         <div className={styles.buttonsSkeleton}>
-          <div className={styles.buttonSkeleton} />
-          <div className={styles.buttonSkeleton} />
-          <div className={styles.buttonSmallSkeleton} />
+          <Skeleton className={styles.buttonSkeleton} />
+          <Skeleton className={styles.buttonSkeleton} />
+          <Skeleton className={styles.buttonSmallSkeleton} />
         </div>
 
         <div className={styles.overviewSkeleton}>
-          <div />
-          <div />
-          <div />
-          <div />
+          <Skeleton className={styles.overviewLine} />
+          <Skeleton className={styles.overviewLine} />
+          <Skeleton className={styles.overviewLine} />
+          <Skeleton className={styles.overviewLast} />
         </div>
 
         <div className={styles.infoSkeleton}>
-          <div />
-          <div />
-          <div />
-          <div />
-          <div />
+          <Skeleton className={styles.infoLine} />
+          <Skeleton className={styles.infoLine} />
+          <Skeleton className={styles.infoLine} />
+          <Skeleton className={styles.infoLine} />
+          <Skeleton className={styles.infoLine} />
         </div>
       </div>
     </div>

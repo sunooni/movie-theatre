@@ -1,18 +1,18 @@
+import { Skeleton } from "@/shared/ui/skeleton/Skeleton";
+
 import styles from "./movieInfo.module.css";
 
 export const MovieCastSkeleton = () => {
   return (
     <section className={styles.cast}>
-      <div className={styles.titleSkeleton} />
+      <Skeleton className={styles.titleSkeleton} />
 
       <div className={styles.list}>
         {Array.from({ length: 6 }).map((_, index) => (
           <div className={styles.actor} key={index}>
-            <div className={styles.photoSkeleton} />
-
-            <div className={styles.nameSkeleton} />
-
-            <div className={styles.characterSkeleton} />
+            <Skeleton className={styles.photoSkeleton} />
+            <Skeleton className={styles.nameSkeleton} />
+            <Skeleton className={styles.characterSkeleton} />
           </div>
         ))}
       </div>
