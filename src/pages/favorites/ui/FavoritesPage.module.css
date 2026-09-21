@@ -1,0 +1,23 @@
+.page {
+  min-height: 600px;
+  padding: 50px 90px 80px;
+
+  color: #ffffff;
+}
+
+.title {
+  margin: 0 0 30px;
+
+  font-size: 32px;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.empty {
+  color: #888888;
+  font-size: 18px;
+}

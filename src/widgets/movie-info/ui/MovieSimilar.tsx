@@ -1,13 +1,13 @@
 import { MovieSlider } from "@/widgets/catalog/ui/MovieSlider";
 import { useMovieDetails } from "../model/useMovieDetails";
 import styles from "./movieInfo.module.css";
-
+import { SimilarMoviesSkeleton } from "./SimilarMoviesSkeleton";
 
 export const SimilarMovies = () => {
   const { similarMovies, loading } = useMovieDetails();
 
   if (loading) {
-    return <div>Загрузка...</div>;
+    return <SimilarMoviesSkeleton />;
   }
 
   if (!similarMovies.length) {

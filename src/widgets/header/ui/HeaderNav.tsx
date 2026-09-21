@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 
 const navLinks = [
   { href: "/movies", label: "Фильмы" },
   { href: "/series", label: "Сериалы" },
   { href: "/selection", label: "Подборки" },
+  { href: "/favorites", label: "Избранное" },
 ];
 
 export const HeaderNav = () => {
@@ -12,9 +14,9 @@ export const HeaderNav = () => {
       <ul className={styles.navList}>
         {navLinks.map((link) => (
           <li key={link.href}>
-            <a href={link.href} className={styles.navLink}>
+            <Link to={link.href} className={styles.navLink}>
               {link.label}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

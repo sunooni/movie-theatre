@@ -1,13 +1,9 @@
 .posterWithDetails {
   display: flex;
   gap: 50px;
-
   width: 100%;
-
   padding: 70px 90px;
-
   box-sizing: border-box;
-
   color: #ffffff;
 }
 
@@ -157,7 +153,6 @@
   line-height: 1.4;
 }
 
-
 .titleSimilarMovies {
   margin: 0;
 
@@ -176,3 +171,385 @@
   color: #ff0000;
 }
 
+.reviews {
+  width: 100%;
+  padding: 20px 90px 70px;
+  box-sizing: border-box;
+
+  color: #ffffff;
+}
+
+.title {
+  margin: 0 0 30px;
+
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.review {
+  max-width: 900px;
+
+  margin-bottom: 30px;
+  padding: 25px;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.author {
+  margin: 0 0 20px;
+
+  font-size: 18px;
+}
+
+.content {
+  color: #cccccc;
+
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.content p {
+  margin: 0 0 15px;
+}
+
+.content strong {
+  color: #ffffff;
+}
+
+.content ul,
+.content ol {
+  margin: 15px 0;
+  padding-left: 25px;
+}
+
+.content li {
+  margin-bottom: 8px;
+}
+
+.content {
+  color: #cccccc;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.content p {
+  margin: 0 0 15px;
+}
+
+.content strong {
+  color: #ffffff;
+}
+
+.content ul,
+.content ol {
+  margin: 15px 0;
+  padding-left: 25px;
+}
+
+.content li {
+  margin-bottom: 8px;
+}
+
+.reviewButton {
+  margin-bottom: 30px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #000000;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.reviewButton:hover {
+  opacity: 0.8;
+}
+
+.reviews {
+  width: 100%;
+  padding: 20px 90px 70px;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+.reviews .title {
+  margin: 0 0 30px;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.review {
+  max-width: 900px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 25px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.author {
+  margin: 0 0 20px;
+  font-size: 18px;
+}
+
+.content {
+  color: #cccccc;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.content p {
+  margin: 0 0 15px;
+}
+
+.content strong {
+  color: #ffffff;
+}
+
+.content ul,
+.content ol {
+  margin: 15px 0;
+  padding-left: 25px;
+}
+
+.content li {
+  margin-bottom: 8px;
+}
+
+.posterSkeleton {
+  width: 260px;
+  height: 390px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: skeleton 1.5s infinite;
+}
+
+.titleSkeleton {
+  width: 450px;
+  height: 42px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: skeleton 1.5s infinite;
+}
+
+.buttonsSkeleton {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.buttonSkeleton {
+  width: 150px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.buttonSmallSkeleton {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.buttonSkeleton,
+.buttonSmallSkeleton {
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: skeleton 1.5s infinite;
+}
+
+.overviewSkeleton {
+  width: 700px;
+  margin-bottom: 30px;
+}
+
+.overviewSkeleton div {
+  width: 100%;
+  height: 16px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: skeleton 1.5s infinite;
+}
+
+.overviewSkeleton div:last-child {
+  width: 70%;
+}
+
+.infoSkeleton {
+  width: 500px;
+}
+
+.infoSkeleton div {
+  width: 60%;
+  height: 16px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: skeleton 1.5s infinite;
+}
+
+@keyframes skeleton {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.titleSkeleton {
+  width: 220px;
+  height: 31px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: skeleton 1.5s infinite;
+}
+
+.photoSkeleton {
+  width: 150px;
+  height: 210px;
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: skeleton 1.5s infinite;
+}
+
+.nameSkeleton {
+  width: 110px;
+  height: 18px;
+  margin: 12px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: skeleton 1.5s infinite;
+}
+
+.characterSkeleton {
+  width: 90px;
+  height: 14px;
+  margin: 0 12px 14px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: skeleton 1.5s infinite;
+}
+
+@keyframes skeleton {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.similarSkeleton {
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.titleSimilarSkeleton {
+  width: 220px;
+  height: 31px;
+  margin-left: 90px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+
+  background-size: 200% 100%;
+  animation: skeleton 1.5s infinite;
+}
+
+.similarListSkeleton {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding-left: 90px;
+  padding-right: 80px;
+}
+
+.similarCardSkeleton {
+  width: 100%;
+}
+
+.similarPosterSkeleton {
+  width: 100%;
+  height: 260px;
+  border-radius: 12px;
+
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+
+  background-size: 200% 100%;
+  animation: skeleton 1.5s infinite;
+}
+
+.similarInfoSkeleton {
+  padding-top: 12px;
+}
+
+.similarInfoSkeleton div {
+  height: 14px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+
+  background-size: 200% 100%;
+  animation: skeleton 1.5s infinite;
+}
+
+.similarInfoSkeleton div:first-child {
+  width: 80%;
+}
+
+.similarInfoSkeleton div:nth-child(2) {
+  width: 50%;
+}
+
+.similarInfoSkeleton div:last-child {
+  width: 65%;
+}
+
+@keyframes skeleton {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.reviewsTitleSkeleton {
+  width: 130px;
+  height: 31px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+
+  background-size: 200% 100%;
+  animation: skeleton 1.5s infinite;
+}
+
+.reviewsButtonSkeleton {
+  width: 170px;
+  height: 40px;
+  border-radius: 8px;
+
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+
+  background-size: 200% 100%;
+  animation: skeleton 1.5s infinite;
+}
