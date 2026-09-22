@@ -5,8 +5,6 @@ export const AXIOS_INSTANCE = axios.create({
   baseURL: "https://api.themoviedb.org",
 });
 
-console.log("TMDB API KEY:", import.meta.env.VITE_TMDB_API_KEY ? "есть" : "нет");
-
 export const customInstance = <T>(
   config: AxiosRequestConfig,
   options?: AxiosRequestConfig,
