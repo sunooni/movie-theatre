@@ -1,6 +1,6 @@
 import { useMovieDetails } from "@/widgets/movie-info/model/useMovieDetails";
 import { MovieCastSkeleton } from "./MovieCastSkeleton";
-import styles from "./movieinfo.module.css";
+import styles from "./movieInfo.module.css";
 
 export const MovieCast = () => {
   const { credits, loading } = useMovieDetails();
