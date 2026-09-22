@@ -4,6 +4,7 @@ import { MovieInfoSkeleton } from "./MovieInfoSkeleton";
 import styles from "./movieInfo.module.css";
 import { Button } from "@/shared/ui/button/Button";
 import { FavoriteButton } from "@/features/favorite/ui/favoriteButton";
+import type { MovieCredits200CrewItem } from "@/shared/api/generated/model";
 
 export const MovieInfo = () => {
   const { movie, credits, loading } = useMovieDetails();
@@ -16,8 +17,9 @@ export const MovieInfo = () => {
     return <div>Фильм не найден</div>;
   }
 
-  const director = credits?.crew?.find((person: any) => person.job === "Director");
-
+  const director = credits?.crew?.find(
+    (person: MovieCredits200CrewItem) => person.job === "Director",
+  );
   return (
     <div className={styles.posterWithDetails}>
       <div className={styles.poster}>

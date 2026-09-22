@@ -10,12 +10,10 @@ import styles from "./catalog.module.css";
 export const MovieSliderSkeleton = () => {
   return (
     <div className={styles.slider}>
-      <Swiper modules={[Navigation]} spaceBetween={0} slidesPerView={4}>
+      <Swiper modules={[Navigation]} spaceBetween={20} slidesPerView={4}>
         {Array.from({ length: 4 }).map((_, index) => (
           <SwiperSlide key={index}>
-            <div className={styles.slide}>
-              <MovieCardSkeleton variant="wide" />
-            </div>
+            <MovieCardSkeleton variant="wide" />
           </SwiperSlide>
         ))}
       </Swiper>
