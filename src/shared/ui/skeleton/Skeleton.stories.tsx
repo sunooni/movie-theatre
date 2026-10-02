@@ -1,0 +1,23 @@
+import type { Meta, StoryObj } from "@storybook/react-vite";
+
+import { Skeleton } from "./Skeleton";
+
+const meta = {
+  title: "Shared/Skeleton",
+  component: Skeleton,
+  tags: ["autodocs"],
+} satisfies Meta<typeof Skeleton>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: {
+    style: {
+      width: "300px",
+      height: "200px",
+      borderRadius: "12px",
+    },
+  },
+};
