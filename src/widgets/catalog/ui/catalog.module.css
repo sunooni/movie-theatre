@@ -16,6 +16,7 @@
 }
 
 .slider {
+  position: relative;
   padding-left: 90px;
   padding-right: 80px;
 }
@@ -28,15 +29,21 @@
   align-items: center;
 }
 
-.slider {
-  position: relative;
-  display: flex;
-  padding-left: 90px;
-  padding-right: 80px;
-}
-
 .slider :global(.swiper-button-prev),
 .slider :global(.swiper-button-next) {
   top: 120px;
   transform: translateY(-50%);
+}
+
+.skeletonSlider {
+  display: flex;
+  gap: 10px;
+  padding-left: 90px;
+  padding-right: 80px;
+}
+
+.skeletonSlide {
+  flex: 0 0 350px;
+  width: 350px;
+  height: 200px;
 }
