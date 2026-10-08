@@ -1,22 +1,15 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
 import { MovieCardSkeleton } from "@/entities/movie/ui/MovieCardSkeleton";
-
-import "swiper/css";
-import "swiper/css/navigation";
 
 import styles from "./catalog.module.css";
 
 export const MovieSliderSkeleton = () => {
   return (
-    <div className={styles.slider}>
-      <Swiper modules={[Navigation]} spaceBetween={20} slidesPerView={4}>
-        {Array.from({ length: 4 }).map((_, index) => (
-          <SwiperSlide key={index}>
-            <MovieCardSkeleton variant="wide" />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <div className={styles.skeletonSlider}>
+      {Array.from({ length: 4 }).map((_, index) => (
+        <div className={styles.skeletonSlide} key={index}>
+          <MovieCardSkeleton variant="wide" />
+        </div>
+      ))}
     </div>
   );
 };

@@ -1,7 +1,14 @@
+import { lazy, Suspense } from "react";
+
 import { useMoviesByGenre } from "../model/useMoviesByGenre";
 import styles from "./catalog.module.css";
-import { MovieSlider } from "./MovieSlider";
 import { MovieSliderSkeleton } from "./MovieSliderSkeleton";
+
+const MovieSlider = lazy(() =>
+  import("./MovieSlider").then((module) => ({
+    default: module.MovieSlider,
+  })),
+);
 
 interface MovieGenreSectionProps {
   title: string;
@@ -15,7 +22,13 @@ export const MovieGenreSection = ({ title, genreId }: MovieGenreSectionProps) =>
     <section>
       <h3 className={styles.genreName}>{title}</h3>
 
-      {loading ? <MovieSliderSkeleton /> : <MovieSlider movies={movies} />}
+      {loading ? (
+        <MovieSliderSkeleton />
+      ) : (
+        <Suspense fallback={<MovieSliderSkeleton />}>
+          <MovieSlider movies={movies} />
+        </Suspense>
+      )}
     </section>
   );
 };
